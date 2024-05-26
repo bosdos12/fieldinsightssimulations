@@ -16,7 +16,7 @@ class TemperatureSensor:
   def startUploading(self):
   
     while True:
-      metric_value = random.randint(10, 30)
+      metric_value = random.randint(2, 14)
       iso_format = datetime.now().isoformat()
 
       response = requests.post("http://localhost:3001/api/updatesensormetric", json={
@@ -32,7 +32,7 @@ class TemperatureSensor:
 
 
 mytempsensor = TemperatureSensor(
-  sensorID="6650fe04923e39e761b438b9",
+  sensorID="6651bcaf22be9cd2c6f05a34",
   period=2
 )
 
